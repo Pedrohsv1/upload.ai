@@ -24,7 +24,7 @@ export function VideoSelect(props: VideoSelectProps) {
   const [videos, setVideos] = useState<Video[] | null>(null);
 
   useEffect(() => {
-    api.get("http://localhost:3333/videos").then((response) => {
+    api.get("/videos").then((response) => {
       setVideos(response.data);
     });
   }, []);
