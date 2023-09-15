@@ -50,8 +50,13 @@ export function App() {
           <Separator orientation="vertical" className="h-6" />
 
           <Button variant={"outline"}>
-            <Github className="w-4 h-4 mr-2" />
-            Github
+            <a
+              href="https://github.com/Pedrohsv1"
+              className="flex gap-[0.5] items-center justify-center"
+            >
+              <Github className="w-4 h-4 mr-2" />
+              Github
+            </a>
           </Button>
         </div>
       </div>
