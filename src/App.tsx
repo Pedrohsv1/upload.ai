@@ -38,7 +38,6 @@ export function App() {
       "Content-type": "application/json",
     },
   });
-  console.log(videoId);
 
   return (
     <div className="min-h-screen flex flex-col">
