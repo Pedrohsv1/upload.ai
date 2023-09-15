@@ -11,7 +11,6 @@ import {
   SelectValue,
 } from "./components/ui/select";
 import { Slider } from "./components/ui/slider";
-import { VideoInputForm } from "./components/video-input-form";
 import { PromptSelect } from "./components/prompt-select";
 import { useState } from "react";
 import { useCompletion } from "ai/react";
