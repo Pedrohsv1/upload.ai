@@ -15,6 +15,7 @@ import { VideoInputForm } from "./components/video-input-form";
 import { PromptSelect } from "./components/prompt-select";
 import { useState } from "react";
 import { useCompletion } from "ai/react";
+import { VideoSelect } from "./components/prompt-videos";
 
 export function App() {
   const [temperature, setTemperature] = useState<number>(0.5);
@@ -37,6 +38,7 @@ export function App() {
       "Content-type": "application/json",
     },
   });
+  console.log(videoId);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -79,7 +81,12 @@ export function App() {
           </p>
         </div>
         <aside className="w-80 space-y-6">
-          <VideoInputForm onVideoUploaded={setVideoId} />
+          <div className="space-y-2">
+            <Label>Video</Label>
+            <VideoSelect onVideoSelected={setVideoId} />
+          </div>
+
+          {/* <VideoInputForm onVideoUploaded={setVideoId} /> */}
           <Separator />
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="space-y-2">
